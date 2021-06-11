@@ -1,6 +1,6 @@
 Flask
 Jinja2
 gunicorn
-opencv-python-headless
+opencv-contrib-python-headless
 numpy
 pillow
