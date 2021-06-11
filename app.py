@@ -11,8 +11,8 @@ __author__ = 'Pratik'
 __source__ = ''
 
 app = Flask(__name__)
-UPLOAD_FOLDER = '/static/uploads'
-DETECTION_FOLDER = '/static/detections'
+UPLOAD_FOLDER = 'static/uploads'
+DETECTION_FOLDER = 'static/detections'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER 
 app.config['DETECTION_FOLDER'] = DETECTION_FOLDER
 
