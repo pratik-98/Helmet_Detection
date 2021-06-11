@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<header>
+  <h1 class="title">Helmet Detection </h1>
+</header>
+
+<center>
+    <div>
+      <form  class="form-upload" action = "/uploader" method = "POST" enctype = "multipart/form-data">
+        <img class="mb-4" src="https://www.kindpng.com/picc/m/346-3460446_deep-learning-logo-png-transparent-png.png"
+          alt="" width="120" height="110">
+        <h6 class="sectitle">Please upload an image</h6>
+        <input class="form-control" type = "file" name = "file" />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+        <p></p>
+        <a class="mt-5 mb-3 text-muted" href="https://pratik-98.github.io/CV/">&copy; Pratik Ghadge</a>
+      </form>
+    </div>
+</center>
+
+{% endblock %}
