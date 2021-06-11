@@ -1,12 +1,10 @@
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 import os
 from os import listdir
 from os.path import isfile, join
 
 def Predict(path, img_name):
-    #path = "test/"+j
     output_path = './static/detections/'
     net = cv2.dnn.readNetFromDarknet("yolov3_custom.cfg",r"yolov3_custom_last.weights")
     classes = ['Without Helmet', 'With Helmet']
@@ -71,7 +69,6 @@ def Predict(path, img_name):
 
     indexes = cv2.dnn.NMSBoxes(boxes,confidences,.8,.4)
     font = cv2.FONT_HERSHEY_PLAIN
-    #colors = np.random.uniform(0,255,size =(len(boxes),3))
     if  len(indexes)>0:
         for i in indexes.flatten():
             x,y,w,h = boxes[i]
@@ -82,4 +79,3 @@ def Predict(path, img_name):
             cv2.putText(img,label + " " + confidence, (x,y),font,2,color,2)
 
     cv2.imwrite(output_path + '{}' .format(img_name), img)
-    #plt.imsave("test result/"+j, img)
