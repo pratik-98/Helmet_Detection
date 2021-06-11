@@ -1,6 +1,0 @@
-Flask
-Jinja2
-gunicorn
-opencv-contrib-python-headless
-numpy
-pillow
